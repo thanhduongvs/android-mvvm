@@ -8,11 +8,20 @@ import org.koin.android.ext.koin.androidFileProperties
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
 import thanh.duong.basemvvm.injection.appModules
+import thanh.duong.basemvvm.utils.SharedPrefs
 
 class BaseApp: Application(){
 
+    companion object {
+        lateinit var getContext: Context
+        lateinit var prefs: SharedPrefs
+    }
+
     override fun onCreate() {
         super.onCreate()
+
+        getContext = applicationContext
+        prefs = SharedPrefs(getContext)
 
         startKoin {
             androidContext(this@BaseApp)
@@ -24,7 +33,6 @@ class BaseApp: Application(){
 
     override fun attachBaseContext(base: Context?) {
         super.attachBaseContext(base)
-
         MultiDex.install(this)
     }
 }

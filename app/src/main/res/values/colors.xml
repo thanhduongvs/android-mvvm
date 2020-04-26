@@ -3,4 +3,84 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+
+    <!-- Default Colors -->
+    <color name="transparent">#00000000</color>
+    <color name="background">#FAFAFA</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- BlackBerry 10.3 UI color palette -->
+    <color name="bb_text_white_primary">#F0F0F0</color>
+    <color name="bb_text_white_secondary">#969696</color>
+    <color name="bb_text_black_primary">#323232</color>
+    <color name="bb_text_black_secondary">#646464</color>
+    <color name="bb_white_primary">#F0F0F0</color>
+    <color name="bb_white_base">#E6E6E6</color>
+    <color name="bb_black_primary">#323232</color>
+    <color name="bb_black_base">#282828</color>
+    <color name="bb_blue_primary">#0092CC</color>
+    <color name="bb_blue_base">#087099</color>
+    <color name="bb_red_primary">#FF3333</color>
+    <color name="bb_red_base">#CC3333</color>
+    <color name="bb_yellow_primary">#DCD427</color>
+    <color name="bb_yellow_base">#B7B327</color>
+    <color name="bb_green_primary">#779933</color>
+    <color name="bb_green_base">#5C7829</color>
+
+    <color name="berry_dark">#2b0521</color>
+    <color name="berry_night">#3e0930</color>
+    <color name="berry_medium">#4f123e</color>
+    <color name="berry_day">#601a4c</color>
+    <color name="berry_light">#6b2356</color>
+
+    <color name="text_dark">#141414</color>
+    <color name="text_night">#696969</color>
+    <color name="text_medium">#989898</color>
+    <color name="text_day">#a7a7a7</color>
+    <color name="text_light">#dedede</color>
+
+    <color name="gray_dark">#555555</color>
+    <color name="gray_night">#696969</color>
+    <color name="gray_medium">#757575</color>
+    <color name="gray_day">#848482</color>
+    <color name="gray_light">#808080</color>
+
+
+    <!-- Light theme brand colors. -->
+    <color name="color_light_primary">#6200EE</color>
+    <color name="color_light_primary_dark">#3700B3</color>
+    <color name="color_light_primary_variant">#3700B3</color>
+    <color name="color_light_on_primary">#FFFFFF</color>
+    <color name="color_light_secondary">#03DAC6</color>
+    <color name="color_light_secondary_variant">#018786</color>
+    <color name="color_light_on_secondary">#000000</color>
+
+    <!-- Light theme neutral colors. -->
+    <color name="color_light_background">#FFFFFF</color>
+    <color name="color_light_on_background">#000000</color>
+    <color name="color_light_surface">#FFFFFF</color>
+    <color name="color_light_on_surface">#000000</color>
+    <color name="color_light_error">#B00020</color>
+    <color name="color_light_on_error">#FFFFFF</color>
+
+    <!-- Dark theme brand colors. -->
+    <color name="color_dark_primary">#BB86FC</color>
+    <color name="color_dark_primary_dark">#000000</color>
+    <color name="color_dark_primary_variant">#3700B3</color>
+    <color name="color_dark_on_primary">#000000</color>
+    <color name="color_dark_secondary">#03DAC6</color>
+    <color name="color_dark_secondary_variant">#03DAC6</color>
+    <color name="color_dark_on_secondary">#000000</color>
+
+    <!-- Dark theme neutral colors. -->
+    <color name="color_dark_background">#121212</color>
+    <color name="color_dark_on_background">#FFFFFF</color>
+    <color name="color_dark_surface">#121212</color>
+    <color name="color_dark_on_surface">#FFFFFF</color>
+    <color name="color_dark_error">#CF6679</color>
+    <color name="color_dark_on_error">#000000</color>
+
+    <!-- 32% opacity black -->
+    <color name="color_scrim">#52000000</color>
 </resources>
