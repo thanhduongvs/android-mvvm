@@ -36,3 +36,14 @@ class BaseApp: Application(){
         MultiDex.install(this)
     }
 }
+
+/*
+https://github.com/MindorksOpenSource/Retrofit-Kotlin-Coroutines-Example
+https://github.com/gildor/kotlin-coroutines-retrofit
+https://github.com/eric-ampire/android-clean-architecture
+https://github.com/ATechnoHazard/twist.moe/blob/master/app/src/main/java/dev/smoketrees/twist/api/BaseApiClient.kt
+https://github.com/serhii-pokrovskyi/Android-modern-architecture/blob/master/Kotlin-mvvm-arch-coroutines/app/src/main/java/one/brainyapps/taskmanager/util/helper/LiveEvent.kt
+https://github.com/nikb7/android-boilerplate/blob/master/app/src/main/java/com/techonlabs/androidboilerplate/ApplicationGlideModule.kt
+https://github.com/ademgunay/DemoMeow/tree/master
+https://github.com/ademgunay/DemoMeow
+ */
