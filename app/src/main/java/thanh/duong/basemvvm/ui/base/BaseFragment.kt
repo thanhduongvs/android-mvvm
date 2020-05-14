@@ -6,9 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlin.coroutines.CoroutineContext
 
-abstract class BaseFragment : Fragment(){
+abstract class BaseFragment : Fragment(), CoroutineScope {
 
+    protected lateinit var job: Job
     protected var rootView: View? = null
     fun isAlive(): Boolean = lifecycle.currentState.isAtLeast(Lifecycle.State.STARTED)
 
@@ -18,15 +23,19 @@ abstract class BaseFragment : Fragment(){
 
         rootView = inflater.inflate(getLayout(), container, false)
 
-        onSyncView()
-        onSyncData()
-        onSyncEvent()
-
         if(userVisibleHint){
             // fragment is visible
             onFragmentVisible()
         }
         return rootView
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        onSyncView()
+        onSyncData()
+        onSyncEvent()
     }
 
     override fun setUserVisibleHint(isVisibleToUser: Boolean) {
@@ -37,9 +46,12 @@ abstract class BaseFragment : Fragment(){
         }
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onDestroy() {
+        super.onDestroy()
+        job.cancel()
     }
+
+    override val coroutineContext: CoroutineContext = job + Dispatchers.Main
 
     protected abstract fun getLayout(): Int
     protected open fun onSyncView() {}

@@ -46,4 +46,15 @@ https://github.com/serhii-pokrovskyi/Android-modern-architecture/blob/master/Kot
 https://github.com/nikb7/android-boilerplate/blob/master/app/src/main/java/com/techonlabs/androidboilerplate/ApplicationGlideModule.kt
 https://github.com/ademgunay/DemoMeow/tree/master
 https://github.com/ademgunay/DemoMeow
+
+https://github.com/RajaArslanAkber/WrapContentViewPager
+https://viblo.asia/p/thay-the-progressdialog-bang-progressbutton-trong-ung-dung-cua-ban-oOVlYpjvZ8W
+https://github.com/razir/ProgressButton
+
+https://github.com/meihuali/TuiTuiZhu
+https://github.com/7449/XAdapter
+https://github.com/TStason/SwipeRevealLayout
+https://github.com/rolandwu23/room_chat_medium/tree/master
+https://github.com/AgnaldoNP/PreviewImageCollection
+https://android-arsenal.com/details/1/8055
  */

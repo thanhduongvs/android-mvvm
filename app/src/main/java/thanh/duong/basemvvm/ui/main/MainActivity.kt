@@ -20,10 +20,10 @@ class MainActivity : BaseActivity(), View.OnClickListener {
     //private val viewModel: MainViewModel by viewModel()
     private val viewModel by viewModel<MainViewModel>()
 
-    override fun setLayout(): Int = R.layout.activity_main
+    override fun getLayout(): Int = R.layout.activity_main
 
-    override fun onSyncViews() {
-        super.onSyncViews()
+    override fun onSyncView() {
+        super.onSyncView()
         button_change.setOnClickListener(this)
         getData()
         image_view.loadImageSsl("https://wallet.joco.asia:8888/icon_chart_data/bch.png")
