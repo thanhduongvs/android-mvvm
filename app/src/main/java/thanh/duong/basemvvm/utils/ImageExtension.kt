@@ -8,6 +8,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.request.target.Target
 import java.io.File
+import java.util.concurrent.ExecutionException
 
 
 fun ImageView.loadImage(imageUrl: String) {
@@ -67,4 +68,26 @@ fun ImageView.loadFromLocal(path: String){
         .load(File(path)) // Uri of the picture
         .centerCrop()
         .into(this)
+}
+
+fun ImageView.resume() {
+    Glide.with(this.context).resumeRequests()
+}
+
+fun ImageView.pause() {
+    Glide.with(this.context).pauseRequests()
+}
+
+fun ImageView.downloadImage(url: String): String {
+    val fileFutureTarget = Glide.with(this.context)
+        .load(url).downloadOnly(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL)
+    return try {
+        fileFutureTarget.get().absolutePath
+    } catch (e: InterruptedException) {
+        e.printStackTrace()
+        null.toString()
+    } catch (e: ExecutionException) {
+        e.printStackTrace()
+        null.toString()
+    }
 }
