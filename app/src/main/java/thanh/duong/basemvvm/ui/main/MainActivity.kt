@@ -1,23 +1,19 @@
 package thanh.duong.basemvvm.ui.main
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import kotlinx.android.synthetic.main.activity_main.*
-import org.koin.android.ext.android.getKoin
 import thanh.duong.basemvvm.R
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.context.startKoin
 import org.koin.core.context.stopKoin
-import org.koin.core.qualifier.named
 import thanh.duong.basemvvm.injection.BASE_URL
 import thanh.duong.basemvvm.injection.appModules
 import thanh.duong.basemvvm.utils.loadImageSsl
 import thanh.duong.basemvvm.network.middleware.Result
-import thanh.duong.koinmvvm.base.BaseActivity
+import thanh.duong.basemvvm.ui.base.BaseActivity
 
 class MainActivity : BaseActivity(), View.OnClickListener {
 

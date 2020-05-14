@@ -21,7 +21,7 @@ class BaseApp: Application(){
         super.onCreate()
 
         getContext = applicationContext
-        prefs = SharedPrefs(getContext)
+        prefs = SharedPrefs(applicationContext)
 
         startKoin {
             androidContext(this@BaseApp)

@@ -1,33 +1,27 @@
-package thanh.duong.koinmvvm.base
+package thanh.duong.basemvvm.ui.base
 
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import thanh.duong.basemvvm.R
 
-abstract class BaseActivity: AppCompatActivity() {
+abstract class BaseActivity: AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(setLayout())
-
-        onSyncViews()
-        onSyncEvents()
+        setContentView(getLayout())
+        pendingTransition()
+        onSyncView()
         onSyncData()
+        onSyncEvent()
     }
 
-    protected abstract fun setLayout(): Int
-    protected open fun onSyncViews() {
+    protected abstract fun getLayout(): Int
+    protected open fun pendingTransition(
+        slideIn: Int = R.anim.slide_in_right, slideOut: Int = R.anim.slide_out_left
+    ) {
+        overridePendingTransition(slideIn, slideOut)
     }
-
-    protected open fun onSyncEvents() {
-    }
-
-    protected open fun onSyncData() {
-    }
-
-    fun getContext() = this
-
-    protected fun getRootView(): View? {
-        return window.decorView.rootView
-    }
+    protected open fun onSyncView() {}
+    protected open fun onSyncData() {}
+    protected open fun onSyncEvent() {}
 }

@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "thanh.duong.basemvvm"
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -39,7 +39,6 @@ android {
 dependencies {
 
     def multidex_version = "2.0.1"
-    def recycler_version = "1.1.0"
     def glide_version = "4.11.0"
     def koin_version = "2.1.5"
     def coroutines_version = "1.1.0"
@@ -55,6 +54,8 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation project(':moduleUtils')
 
     implementation "androidx.multidex:multidex:$multidex_version"
     implementation "androidx.recyclerview:recyclerview:$recycler_version"
