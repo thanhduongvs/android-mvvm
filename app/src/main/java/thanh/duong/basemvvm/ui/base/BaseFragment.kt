@@ -11,9 +11,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlin.coroutines.CoroutineContext
 
-abstract class BaseFragment : Fragment(), CoroutineScope {
+abstract class BaseFragment : Fragment() {
 
-    protected lateinit var job: Job
     protected var rootView: View? = null
     fun isAlive(): Boolean = lifecycle.currentState.isAtLeast(Lifecycle.State.STARTED)
 
@@ -45,13 +44,6 @@ abstract class BaseFragment : Fragment(), CoroutineScope {
             onFragmentVisible()
         }
     }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        job.cancel()
-    }
-
-    override val coroutineContext: CoroutineContext = job + Dispatchers.Main
 
     protected abstract fun getLayout(): Int
     protected open fun onSyncView() {}

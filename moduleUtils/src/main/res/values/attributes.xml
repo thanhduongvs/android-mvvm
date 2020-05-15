@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SwipeRevealLayout">
+        <attr name="dragEdge">
+            <flag name="left" value="1" />
+            <flag name="right" value="2" />
+            <flag name="top" value="4" />
+            <flag name="bottom" value="8" />
+        </attr>
+
+        <attr name="mode">
+            <enum name="normal" value="0" />
+            <enum name="same_level"   value="1" />
+        </attr>
+
+        <attr name="flingVelocity" format="integer" />
+
+        <attr name="minDistRequestDisallowParent" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="AvatarView">
+        <attr name="avatarSize" format="enum">
+            <enum name="xsmall" value="0" />
+            <enum name="small" value="1" />
+            <enum name="medium" value="2" />
+            <enum name="large" value="3" />
+            <enum name="xlarge" value="4" />
+            <enum name="xxlarge" value="5" />
+        </attr>
+        <attr name="avatarStyle" format="enum">
+            <enum name="circle" value="0" />
+            <enum name="square" value="1" />
+            <enum name="squircle" value="2" />
+        </attr>
+        <attr name="name" format="string"/>
+        <attr name="email" format="string"/>
+        <attr name="avatarBackgroundColor" format="reference" />
+        <attr name="avatarImageDrawable" format="reference" />
+    </declare-styleable>
+</resources>
