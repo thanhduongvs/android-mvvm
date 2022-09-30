@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/tab_first"
+        android:icon="@drawable/ic_home_24"
+        android:title="first" />
+
+    <item
+        android:id="@+id/tab_second"
+        android:icon="@drawable/ic_mail_24"
+        android:title="second" />
+
+    <item
+        android:id="@+id/tab_third"
+        android:icon="@drawable/ic_room_24"
+        android:title="third" />
+
+    <item
+        android:id="@+id/tab_fourth"
+        android:icon="@drawable/ic_settings_24"
+        android:title="fourth" />
+
+</menu>
